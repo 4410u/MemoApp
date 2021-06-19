@@ -1,19 +1,20 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import { string, shape } from 'prop-types';
+import { Feather } from '@expo/vector-icons';
 
 export default function CircleButton(props) {
-  const { children, style } = props;
+  const { style, name } = props;
   return (
     <View style={[styles.addBtn, style]}>
-      <Text style={styles.addBtnPlus}>{children}</Text>
+      <Feather name={name} size={32} color="white" />
     </View>
   );
 }
 
 CircleButton.propTypes = {
-  children: string.isRequired,
   style: shape(),
+  name: string.isRequired,
 };
 
 CircleButton.defaultProps = {
@@ -21,9 +22,6 @@ CircleButton.defaultProps = {
 };
 
 const styles = StyleSheet.create({
-  memoBtn: {
-
-  },
   memoClose: {
     color: '#b0b0b0',
     fontSize: 24,
