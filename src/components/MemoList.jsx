@@ -8,6 +8,7 @@ import {
 } from 'prop-types';
 
 import Icon from './Icon';
+import { dateToString } from '../utils';
 
 export default function MemoList(props) {
   const { memos } = props;
@@ -17,12 +18,12 @@ export default function MemoList(props) {
     return (
       <TouchableOpacity
         style={styles.memoList}
-        onPress={() => { navigation.navigate('MemoDetail'); }}
+        onPress={() => { navigation.navigate('MemoDetail', { id: item.id }); }}
       >
         <View style={styles.memoItem}>
           <View style={styles.memoText}>
             <Text style={styles.memoTitle} numberOfLines={1}>{item.bodyText}</Text>
-            <Text style={styles.memoDate}>{String(item.updatedAt)}</Text>
+            <Text style={styles.memoDate}>{dateToString(item.updatedAt)}</Text>
           </View>
           <TouchableOpacity
             style={styles.memoDelete}
