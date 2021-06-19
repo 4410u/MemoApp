@@ -1,5 +1,7 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import {
+  View, Text, StyleSheet, TouchableOpacity,
+} from 'react-native';
 
 import Icon from './Icon';
 
@@ -12,9 +14,9 @@ export default function MemoList() {
             <Text style={styles.memoTitle}>買い物リスト</Text>
             <Text style={styles.memoDate}>2020年12月24日 10:00</Text>
           </View>
-          <View>
+          <TouchableOpacity>
             <Icon name="delete" size={32} color="#b0b0b0" />
-          </View>
+          </TouchableOpacity>
         </View>
       </View>
       <View style={styles.memoList}>
@@ -23,9 +25,9 @@ export default function MemoList() {
             <Text style={styles.memoTitle}>買い物リスト</Text>
             <Text style={styles.memoDate}>2020年12月24日 10:00</Text>
           </View>
-          <View>
+          <TouchableOpacity>
             <Icon name="delete" size={32} color="#b0b0b0" />
-          </View>
+          </TouchableOpacity>
         </View>
       </View>
       <View style={styles.memoList}>
@@ -34,9 +36,9 @@ export default function MemoList() {
             <Text style={styles.memoTitle}>買い物リスト</Text>
             <Text style={styles.memoDate}>2020年12月24日 10:00</Text>
           </View>
-          <View>
+          <TouchableOpacity>
             <Icon name="delete" size={32} color="#b0b0b0" />
-          </View>
+          </TouchableOpacity>
         </View>
       </View>
     </View>
