@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
     width: 64,
     height: 64,
     borderRadius: 32,
-    backgroundColor: '#467fd3',
+    backgroundColor: '#ce9eff',
     position: 'absolute',
     right: 40,
     bottom: 40,
