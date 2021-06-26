@@ -26,15 +26,15 @@ export default function MemoListScreen(props) {
     cleanupFuncs.auth = firebase.auth().onAuthStateChanged((user) => {
       if (user) {
         const db = firebase.firestore();
-        const ref = db.collection(`users/${user.uid}/memos`).orderBy('updateAt', 'desc');
+        const ref = db.collection(`users/${user.uid}/memos`).orderBy('updatedAt', 'desc');
         cleanupFuncs.memos = ref.onSnapshot((snapshot) => {
           const userMemos = [];
           snapshot.forEach((doc) => {
             const data = doc.data();
             userMemos.push({
               id: doc.id,
-              bodyText: data.bobyText,
-              updateAt: data.updateAt.toDate(),
+              bodyText: data.bodyText,
+              updatedAt: data.updatedAt.toDate(),
             });
           });
           setMemos(userMemos);
