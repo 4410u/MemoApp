@@ -19,11 +19,11 @@
     ],
     "ios": {
       "supportsTablet": false,
-      "bundleIdentifier": "io.4410",
+      "bundleIdentifier": "io.io4410.memoapp",
       "buildNumber": "1.0.0"
     },
     "android": {
-      "package": "io.4410",
+      "package": "io.io4410.memoapp",
       "versionCode": 1,
       "permissions": [],
       "adaptiveIcon": {
