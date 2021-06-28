@@ -16,7 +16,7 @@ export default function CancelLogIn() {
       }}
       style={styles.container}
     >
-      <Icon name="delete" size={36} color="rgba(255, 255, 255, 0.8)" />
+      <Icon name="delete" size={24} color="rgba(255, 255, 255, 0.8)" />
     </TouchableOpacity>
   );
 }
