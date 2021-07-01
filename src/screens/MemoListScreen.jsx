@@ -9,6 +9,7 @@ import CircleButton from '../components/CircleButton';
 import Button from '../components/Button';
 import Loading from '../components/Loading';
 import HeaderRightButton from '../components/HeaderRightButton';
+import TrackingTransparency from '../components/TrackingTransparency';
 
 export default function MemoListScreen(props) {
   const { navigation } = props;
@@ -65,6 +66,7 @@ export default function MemoListScreen(props) {
     return (
       <View style={emptyStyles.container}>
         <Loading isLoading={isLoading} />
+        <TrackingTransparency />
         <View style={emptyStyles.inner}>
           <Text style={emptyStyles.title}>最初のメモを作成しよう!</Text>
           <Button
